@@ -1,0 +1,13 @@
+User-agent: *
+Disallow: /impressum
+Disallow: /impressum.html
+Disallow: /datenschutz
+Disallow: /datenschutz.html
+Disallow: /agb
+Disallow: /agb.html
+Disallow: /widerruf
+Disallow: /widerruf.html
+
+Allow: /
+
+Sitemap: https://immoklar-check.de/sitemap.xml

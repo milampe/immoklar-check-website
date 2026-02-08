@@ -1,0 +1,10 @@
+RewriteEngine On
+
+# Redirect /index.html directly to canonical root (one hop).
+RewriteCond %{REQUEST_URI} ^/index\.html$
+RewriteRule ^index\.html$ https://immoklar-check.de/ [R=301,L]
+
+# Force HTTPS and non-www canonical host.
+RewriteCond %{HTTPS} !=on [OR]
+RewriteCond %{HTTP_HOST} ^www\.immoklar-check\.de$ [NC]
+RewriteRule ^(.*)$ https://immoklar-check.de/$1 [R=301,L]
